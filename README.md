@@ -1,5 +1,5 @@
 # Desafio Front-end LuizaLabs
-Por Leonardo Silvatti Silva
+Por Leonardo Silvatti Silva \
 Feito com React e Typescript
 
 ## Dependências usadas neste projeto
