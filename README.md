@@ -5,6 +5,7 @@ Feito com React e Typescript
 ## Dependências usadas neste projeto
 
 - React Router
+- Axios
 - Styled Components
 - Jest
 - React Testing Library
