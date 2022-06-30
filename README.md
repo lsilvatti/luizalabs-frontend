@@ -6,7 +6,7 @@ Feito com React e Typescript
 
 - React Router
 - Axios
-- Styled Components
+- SASS
 - Jest
 - React Testing Library
 
