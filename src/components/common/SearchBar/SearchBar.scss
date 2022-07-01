@@ -1,0 +1,48 @@
+.search-bar {
+    border-radius: 100px;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+
+    input {
+        border: none;
+        border-radius: 100px;
+        background-color: transparent;
+        color: #333;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        &:focus {
+            border: none;
+        }
+    }
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translate(0,-50%)
+    }
+
+    &--primary {
+        background-image: url("../../../assets/svg/search_bar_vermelho.svg");
+        max-width: 867px;
+        height: 67px;
+        input {
+            font-size: 1.5rem;
+            padding-left: 50px;
+        }
+
+    }
+    &--secondary {
+        background-image: url("../../../assets/svg/search_bar_branco.svg");
+        max-width: 572px;
+        height: 44px;
+        input {
+            font-size: 1rem;
+            padding-left: 35px;
+        }
+    }
+}
