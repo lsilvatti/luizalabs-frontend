@@ -1,4 +1,4 @@
-import useGetHeroes from "./useGetHeroes";
-import useGetHeroById from "./useGetHeroeById";
+import useGetCharacters from "./useGetCharacters";
+import useGetCharacterById from "./useGetCharacterById";
 
-export { useGetHeroes, useGetHeroById }
+export { useGetCharacters as useGetHeroes, useGetCharacterById as useGetHeroById }
