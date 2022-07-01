@@ -1,4 +1,3 @@
-import { InputHTMLAttributes } from "react";
 import ic_busca from 'assets/svg/ic_busca.svg';
 import ic_busca_menor from 'assets/svg/ic_busca_menor.svg';
 
@@ -14,9 +13,8 @@ function SearchBar(props: SearchBarProps) {
 
     return (
         <div className={`search-bar search-bar--${variant}`}>
-            <img src={variant === 'primary' ? ic_busca : ic_busca_menor} alt=""></img>
-            
-            <input placeholder={placeholder} type={"text"}>
+            <img src={variant === 'primary' ? ic_busca : ic_busca_menor} alt=""></img>  
+                <input placeholder={placeholder} type={"text"}>
             </input>
         </div>
 
