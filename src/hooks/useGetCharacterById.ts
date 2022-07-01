@@ -3,27 +3,18 @@ import { AxiosError } from 'axios';
 import { getHash } from 'utils/getHash';
 import { marvelService } from 'services';
 
-interface HeroesFetchable {
-    ts: number;
-    hash: string;
-    nameStartsWith?: string;
-}
 
-const useGetHeroes = (name: string) => {
+
+const useGetCharacterById = (id: number) => {
     const [data, setData] = useState(null);
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        const requestParams: HeroesFetchable = {
-            ...getHash()
-        };
-        if(name) requestParams.nameStartsWith = name;
-        
+    useEffect(() => { 
         (async () => {
             try {
-                const response = await marvelService.get('v1/public/characters', {
-                    params: requestParams
+                const response = await marvelService.get(`v1/public/characters/${id}`, {
+                    params: getHash()
                 });
                 setData(response.data.data);
             } catch(err) {
@@ -33,9 +24,9 @@ const useGetHeroes = (name: string) => {
                 setLoading(false)
             }
         })();
-    }, [name])
+    }, [id])
 
     return {data, error, loading}
 }
 
-export default useGetHeroes;
+export default useGetCharacterById;
