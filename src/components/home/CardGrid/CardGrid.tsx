@@ -8,31 +8,52 @@ import { Loading } from "components/common";
 import CardGridPagination from "./CardGridPagination";
 import { getFavoriteList } from "utils";
 import face_sad from "assets/svg/face-frown-open-solid.svg";
+import { useParams } from "react-router-dom";
 
 export default function CardGrid() {
+  const { nameStartsWith } = useParams<"nameStartsWith">();
+  const [name, setName] = useState("");
   const [alphabeticOrder, setAlphabeticOrder] = useState<orderBy>("name");
   const [page, setPage] = useState(0);
   const [favoriteOnly, setFavoriteOnly] = useState(false);
   const [heroList, setHeroList] = useState<Character[]>();
   const [count, setCount] = useState(0);
-  const { data, loading, error } = useGetCharacters("", alphabeticOrder, page);
+  const { data, loading, error } = useGetCharacters(
+    nameStartsWith,
+    alphabeticOrder,
+    page
+  );
+
+  useEffect(() => {
+    let nameParam = nameStartsWith ?? "";
+    setName(nameParam);
+    setPage(0);
+  }, [nameStartsWith, favoriteOnly]);
 
   useEffect(() => {
     const storageFavorite = getFavoriteList();
     if (favoriteOnly && storageFavorite) {
-      console.log(favoriteOnly);
-      setHeroList(storageFavorite);
+      console.log(storageFavorite);
+      console.log(
+        storageFavorite.filter((character) => character.name.includes(name))
+      );
+      console.log(name);
+      setHeroList(
+        storageFavorite.filter((character) =>
+          character.name.toLocaleLowerCase().includes(name.toLowerCase())
+        )
+      );
       setCount(storageFavorite.length);
       return;
     }
 
     if (data) {
-      console.log(data);
       setCount(data.total);
       setHeroList(data.results);
     }
+
     if (loading) setCount(0);
-  }, [data, loading, favoriteOnly, page]);
+  }, [data, loading, favoriteOnly, page, nameStartsWith]);
 
   return (
     <section className="card-grid container">
