@@ -1,5 +1,5 @@
 import "./App.scss";
-import { Home } from "pages";
+import { Home, NotFound } from "pages";
 import { Routes, Route, Outlet } from "react-router-dom";
 import { Footer } from "components/common";
 import Character from "pages/Character/Character";
@@ -20,6 +20,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/busca/:nameStartsWith" element={<Home />} />
         <Route path="/personagem/:id" element={<Character />} />
+        <Route path="*" element={<NotFound></NotFound>} />
       </Route>
     </Routes>
   );

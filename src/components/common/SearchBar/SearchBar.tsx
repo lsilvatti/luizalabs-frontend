@@ -25,7 +25,7 @@ function SearchBar(props: SearchBarProps) {
       navigate(`/busca/${searchInput}`);
       return;
     }
-    navigate("/", { replace: true });
+    navigate("..", { replace: true });
   };
 
   const handleSearchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
