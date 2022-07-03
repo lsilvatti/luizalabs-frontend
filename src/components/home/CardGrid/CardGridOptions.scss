@@ -19,6 +19,11 @@ $mobile-breakpoint: 497px;
     }
 
     &__order {
+
+        img {
+            height: 25px;
+        }
+
         margin-bottom: 10px;
 
         span {
