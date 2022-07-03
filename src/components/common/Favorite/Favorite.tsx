@@ -23,12 +23,11 @@ function Favorite(props: FavoriteProps) {
   }, []);
 
   const handleClick = () => {
-    setFavoriteIcon(!favoriteIcon);
     if (favoriteIcon) {
-      removeFavorite(character);
+      setFavoriteIcon(!removeFavorite(character));
       return;
     }
-    setFavorite(character);
+    setFavoriteIcon(setFavorite(character));
   };
 
   return (
