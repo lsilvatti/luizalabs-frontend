@@ -28,6 +28,9 @@ export default function CardGrid() {
     let nameParam = nameStartsWith ?? "";
     setName(nameParam);
     setPage(0);
+    document.title = `Luizalabs Heroes${
+      nameParam ? ` - Busca - ${nameParam}` : ""
+    }`;
   }, [nameStartsWith, favoriteOnly]);
 
   useEffect(() => {
