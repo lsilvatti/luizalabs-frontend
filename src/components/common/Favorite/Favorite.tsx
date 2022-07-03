@@ -1,44 +1,46 @@
-import favorito_01 from 'assets/svg/favorito_01.svg';
-import favorito_02 from 'assets/svg/favorito_02.svg';
-import favorito_03 from 'assets/svg/favorito_03.svg';
+import favorito_01 from "assets/svg/favorito_01.svg";
+import favorito_02 from "assets/svg/favorito_02.svg";
+import favorito_03 from "assets/svg/favorito_03.svg";
+import { Character } from "components/types";
 
-import { useState } from 'react';
+import { useEffect, useState } from "react";
+import { getFavoriteList, removeFavorite, setFavorite } from "utils";
 
-import './Favorite.scss';
+import "./Favorite.scss";
 
 interface FavoriteProps {
-
+  character: Character;
 }
 
 function Favorite(props: FavoriteProps) {
-    const [hover, setHover] = useState(false);
-    const [favorite, setFavorite] = useState(false);
-    const {  } = props;
+  const [favoriteIcon, setFavoriteIcon] = useState(false);
+  const { character } = props;
 
-    const handleMouseOver = () => {
-        setHover(true);
+  useEffect(() => {
+    const favoriteList = getFavoriteList();
+    if (favoriteList.find((element) => element.id === character.id))
+      setFavoriteIcon(true);
+  }, []);
+
+  const handleClick = () => {
+    if (favoriteIcon) {
+      setFavoriteIcon(!removeFavorite(character));
+      return;
     }
+    setFavoriteIcon(setFavorite(character));
+  };
 
-    const handleMouseOut = () => {
-        setHover(false);
-    }
-
-    const handleClick = () => {
-        setFavorite(!favorite);
-    }
-
-    return (
-        <>
-            {favorite ?
-            <img onClick={handleClick} src={favorito_03}></img> :
-            <img onClick={handleClick} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} src={hover ? favorito_01 : favorito_02}></img>
-        }
-        </>
-    )
+  return (
+    <>
+      <img
+        onClick={handleClick}
+        className="favorite__icon"
+        src={favoriteIcon ? favorito_01 : favorito_02}
+      ></img>
+    </>
+  );
 }
 
-Favorite.defaultProps = {
-
-}
+Favorite.defaultProps = {};
 
 export default Favorite;

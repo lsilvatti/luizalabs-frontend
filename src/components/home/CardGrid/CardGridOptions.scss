@@ -1,0 +1,50 @@
+$mobile-breakpoint: 497px;
+
+.card-grid-options {
+    justify-self: end;
+    display: flex;
+    flex-wrap: wrap ;
+    color: #FF0000;
+    font-size: 1rem;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    &--loading {
+        opacity: 0.7;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+    }
+
+    &__order {
+        margin-bottom: 10px;
+
+        span {
+            margin: 0px 15px;
+        }
+
+        @media (min-width: $mobile-breakpoint) {
+            margin-bottom: unset;
+        }
+
+
+    }
+
+    &__favorite {
+        
+        justify-content: flex-end;
+        img {
+            margin-right: 15px;
+        }
+
+        @media (min-width: $mobile-breakpoint) {
+           margin-left: 30px;
+        }   
+    }
+
+    @media (min-width: $mobile-breakpoint) {
+        margin-bottom: unset;
+     }   
+}

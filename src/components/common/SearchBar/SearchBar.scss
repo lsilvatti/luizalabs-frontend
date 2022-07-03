@@ -30,9 +30,17 @@
         background-image: url("../../../assets/svg/search_bar_vermelho.svg");
         max-width: 867px;
         height: 67px;
+        
         input {
-            font-size: 1.5rem;
-            padding-left: 50px;
+            font-size: 1.3rem;
+            padding-left: 60px;
+            color: #ff0000;
+            &::placeholder {
+                color:#ff7171 ;
+            }
+            &:focus {
+                outline: none;
+            }
         }
 
     }
@@ -43,6 +51,13 @@
         input {
             font-size: 1rem;
             padding-left: 35px;
+            color: #333;
+            &::placeholder {
+                color:#999 ;
+            }
+            &:focus {
+                outline: none;
+            }
         }
     }
 }
