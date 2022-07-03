@@ -35,13 +35,13 @@ export default function CardGrid() {
   }, [data, loading, favoriteOnly, page]);
 
   return (
-    <section className="card-grid">
+    <section className="card-grid container">
       <div className="card-grid__header">
-        <span>
+        <span className="card-grid__info">
           {loading
             ? "Carregando listagem"
             : count
-            ? `Foram encontrados ${count} heróis`
+            ? `Encontrados ${count} heróis`
             : "Não foram encontrados heróis"}
         </span>
         <CardGridOptions

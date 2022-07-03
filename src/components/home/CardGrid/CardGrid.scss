@@ -1,7 +1,4 @@
 .card-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 10px;
 
     &__header {
         display: flex;
@@ -24,16 +21,23 @@
     }
 
     &__no-results {
-
+        min-height: 400px;
         margin: 35px 0px;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         opacity: 0.5;
         font-size: 1.5rem;
         font-weight: 600;
         img {
-            margin-bottom: 20px;
+            margin-bottom: 50px;
             max-height: 150px;
         }
+    }
+
+    &__info {
+        font-weight: 600;
+        color: #888;
     }
 }
