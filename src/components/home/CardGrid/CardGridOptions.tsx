@@ -37,15 +37,17 @@ export default function CardGridOptions(props: CardGridOptionsProps) {
         loading ? "card-grid-options--loading" : ""
       }`}
     >
-      <div className="card-grid-options__order">
-        <img src={ic_heroi} alt="" />
-        <span>Ordenar por nome - A/Z</span>
-        <img
-          onClick={handleOrderClick}
-          src={order ? toggle_on : toggle_off}
-          alt=""
-        />
-      </div>
+      {!favorite && (
+        <div className="card-grid-options__order">
+          <img src={ic_heroi} alt="" />
+          <span>Ordenar por nome - A/Z</span>
+          <img
+            onClick={handleOrderClick}
+            src={order ? toggle_on : toggle_off}
+            alt=""
+          />
+        </div>
+      )}
       <div
         className="card-grid-options__favorite"
         onClick={handleFavoriteClick}

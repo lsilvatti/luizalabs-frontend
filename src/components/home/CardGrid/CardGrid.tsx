@@ -69,10 +69,10 @@ export default function CardGrid() {
               activePage={page}
             ></CardGridPagination>
           )}
-          {!count && (
+          {(!count || error) && (
             <div className="card-grid__no-results">
               <img src={face_sad} alt="" />
-              Não há resultados para mostrar!
+              <span>{error ? error : "Não há resultados para mostrar!"}</span>
             </div>
           )}
         </section>
