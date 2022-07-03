@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/luizalabs-frontend/static/css/main.f86de371.css",
-    "main.js": "/luizalabs-frontend/static/js/main.7807e632.js",
+    "main.js": "/luizalabs-frontend/static/js/main.7c7e00d8.js",
     "static/js/787.d0b8c6cc.chunk.js": "/luizalabs-frontend/static/js/787.d0b8c6cc.chunk.js",
     "static/media/logo.svg": "/luizalabs-frontend/static/media/logo.36e9e54e5461610eeb5a2048d639de6c.svg",
     "static/media/ic_heroi.svg": "/luizalabs-frontend/static/media/ic_heroi.307b37f714ca4151d931a96d776cbd0c.svg",
@@ -19,11 +19,11 @@
     "static/media/chevron-left-solid.svg": "/luizalabs-frontend/static/media/chevron-left-solid.1115c6b8f03c8b0aa456d5cb5449d873.svg",
     "static/media/chevron-right-solid.svg": "/luizalabs-frontend/static/media/chevron-right-solid.e2ac229a366fbfc01c77cefebbe8f733.svg",
     "main.f86de371.css.map": "/luizalabs-frontend/static/css/main.f86de371.css.map",
-    "main.7807e632.js.map": "/luizalabs-frontend/static/js/main.7807e632.js.map",
+    "main.7c7e00d8.js.map": "/luizalabs-frontend/static/js/main.7c7e00d8.js.map",
     "787.d0b8c6cc.chunk.js.map": "/luizalabs-frontend/static/js/787.d0b8c6cc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f86de371.css",
-    "static/js/main.7807e632.js"
+    "static/js/main.7c7e00d8.js"
   ]
 }
