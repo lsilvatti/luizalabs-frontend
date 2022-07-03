@@ -2,6 +2,7 @@ import "./App.scss";
 import { Home } from "pages";
 import { Routes, Route, Outlet } from "react-router-dom";
 import { Footer } from "components/common";
+import Character from "pages/Character/Character";
 
 function Layout() {
   return (
@@ -17,7 +18,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="/:nameStartsWith" element={<Home />} />
+        <Route path="/busca/:nameStartsWith" element={<Home />} />
+        <Route path="/personagem/:id" element={<Character />} />
       </Route>
     </Routes>
   );
