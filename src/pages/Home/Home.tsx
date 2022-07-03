@@ -1,6 +1,6 @@
 import logo from "assets/svg/logo.svg";
 import { SearchBar } from "components/common";
-import CardGrid from "components/home/CardGrid/CardGrid";
+import { CardGrid } from "components/home";
 
 import "./Home.scss";
 
