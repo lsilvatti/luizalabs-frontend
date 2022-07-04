@@ -14,7 +14,7 @@ interface CardGridOptionsProps {
 }
 
 export default function CardGridOptions(props: CardGridOptionsProps) {
-  const [order, setOrder] = useState(false);
+  const [order, setOrder] = useState(true);
   const [favorite, setFavorite] = useState(false);
 
   const { setAlphabetic, setFavoritesOnly, loading } = props;
@@ -22,7 +22,7 @@ export default function CardGridOptions(props: CardGridOptionsProps) {
   const handleOrderClick = () => {
     if (loading) return;
     setOrder(!order);
-    setAlphabetic(order ? "name" : "-name");
+    setAlphabetic(order ? "-name" : "name");
   };
 
   const handleFavoriteClick = () => {
@@ -38,7 +38,11 @@ export default function CardGridOptions(props: CardGridOptionsProps) {
       }`}
     >
       {!favorite && (
-        <div className="card-grid-options__order">
+        <div
+          className={`card-grid-options__order ${
+            order ? "card-grid-options__order--active" : ""
+          }`}
+        >
           <img src={ic_heroi} alt="" />
           <span>Ordenar por nome - A/Z</span>
           <img
