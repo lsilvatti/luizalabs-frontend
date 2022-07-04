@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="luiza-heroes-home">
       <div className={"luiza-heroes-home__header container"}>
-        <img src={logo} />
+        <img src={logo} alt="logo" />
         <h1>Explore o Universo</h1>
         <p>
           Mergulhe no domínio deslumbrante de todos os personagens clássicos que

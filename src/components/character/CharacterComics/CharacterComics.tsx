@@ -31,6 +31,7 @@ export default function CharacterComics(props: CharacterComicsProps) {
             >
               <img
                 src={`${comic.thumbnail.path}/portrait_fantastic.${comic.thumbnail.extension}`}
+                alt={comic.title}
               />
               <span>{comic.title}</span>
             </a>

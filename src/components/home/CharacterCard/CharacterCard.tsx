@@ -18,6 +18,7 @@ function CharacterCard(props: CharacterCardProps) {
     <div className="hero-card__main">
       <Link to={`../personagem/${character.id}`}>
         <img
+          alt={character.name}
           className="hero-card__portrait"
           src={`${character.thumbnail.path}/standard_fantastic.${character.thumbnail.extension}`}
         ></img>
