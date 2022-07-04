@@ -5,8 +5,8 @@ import "./Loading.scss";
 
 export default function Loading() {
   return (
-    <section className="luizaheroes-marvel__loading">
+    <div className="luizaheroes-marvel__loading">
       <img src={ball_triangle} />
-    </section>
+    </div>
   );
 }

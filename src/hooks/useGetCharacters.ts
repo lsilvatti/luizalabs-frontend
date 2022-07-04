@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { AxiosError } from "axios";
-import { getHash } from "utils/getHash";
+import { getHash } from "utils";
 import { marvelService } from "services";
 import {
   CharacterDataContainer,

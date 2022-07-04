@@ -36,7 +36,7 @@ export default function Character() {
     }
   }, [id]);
   return (
-    <section className="luiza-heroes-character">
+    <div className="luiza-heroes-character">
       {!loadingCharacter && character && !loadingComics && comics ? (
         <>
           <CharacterHeader />
@@ -46,6 +46,6 @@ export default function Character() {
       ) : (
         <Loading />
       )}
-    </section>
+    </div>
   );
 }

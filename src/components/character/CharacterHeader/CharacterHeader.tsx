@@ -6,7 +6,7 @@ import "./CharacterHeader.scss";
 
 export default function CharacterHeader() {
   return (
-    <section className="luiza-heroes-character-header container">
+    <div className="luiza-heroes-character-header container">
       <div className="luiza-heroes-character-header__logo">
         <Link to={".."}>
           <img src={logo_menor} alt="" />
@@ -17,6 +17,6 @@ export default function CharacterHeader() {
         placeholder="Procure por heróis"
       ></SearchBar>
       <div className="luiza-heroes-character-header__element"></div>
-    </section>
+    </div>
   );
 }
