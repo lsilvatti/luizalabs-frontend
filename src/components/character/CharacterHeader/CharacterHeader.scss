@@ -1,0 +1,33 @@
+.luiza-heroes-character-header {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  &__logo {
+    display: inherit;
+    flex: 1;
+    a {
+      margin: 0 auto 30px;
+    }
+  }
+
+  &__element {
+    flex: 1;
+    display: none;
+    @media (min-width: 807px) {
+      display: block;
+    }
+  }
+
+  @media (min-width: 807px) {
+    &__element {
+      display: block;
+    }
+
+    &__logo a {
+      margin: unset;
+    }
+  }
+}
