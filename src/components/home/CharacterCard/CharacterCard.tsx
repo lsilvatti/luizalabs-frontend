@@ -15,18 +15,21 @@ function CharacterCard(props: CharacterCardProps) {
   const { character } = props;
 
   return (
-    <Link to={`../personagem/${character.id}`}>
-      <div className="hero-card__main">
+    <div className="hero-card__main">
+      <Link to={`../personagem/${character.id}`}>
         <img
           className="hero-card__portrait"
           src={`${character.thumbnail.path}/standard_fantastic.${character.thumbnail.extension}`}
         ></img>
-        <div className="hero-card__info">
+      </Link>
+
+      <div className="hero-card__info">
+        <Link to={`../personagem/${character.id}`}>
           <span>{character.name}</span>
-          <Favorite character={character}></Favorite>
-        </div>
+        </Link>
+        <Favorite character={character}></Favorite>
       </div>
-    </Link>
+    </div>
   );
 }
 

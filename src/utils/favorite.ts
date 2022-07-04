@@ -3,7 +3,6 @@ import { getValue, setValue } from "./localStorage";
 
 export function setFavorite(character: Character) {
   const favoriteList: Character[] = getValue("favoriteList");
-  console.log(favoriteList);
   if (favoriteList.length === 5) {
     window.alert("Você atingiu o máximo de 5 personagens favoritados!");
     return false;

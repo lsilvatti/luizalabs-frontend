@@ -2,6 +2,10 @@
   margin-top: 70px;
   margin-bottom: 90px;
 
+  h2 {
+    margin-bottom: 45px;
+  }
+
   &__comic {
     color: #333;
     display: flex;
@@ -32,6 +36,8 @@
   }
 
   @media (min-width: 576px) {
+    margin-top: 90px;
+
     &__comic {
       align-items: center;
       width: unset;
