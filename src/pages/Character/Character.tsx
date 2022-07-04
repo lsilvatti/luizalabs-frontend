@@ -24,7 +24,11 @@ export default function Character() {
     loading: loadingComics,
     error: errorComics,
   } = useGetComics(characterId);
-  console.log(comics);
+
+  useEffect(() => {
+    if (character)
+      document.title = `Luizalabs Heroes - Personagem - ${character.name}`;
+  }, [character]);
 
   useEffect(() => {
     if (id) {
