@@ -22,7 +22,10 @@ export default function CharacterInfo(props: CharacterInfoProps) {
   const [lastComicDate, setLastComicDate] = useState<String>();
 
   useEffect(() => {
-    const date = new Date(lastComic.dates[0].date).toLocaleDateString("pt-BR");
+    let date = "não há quadrinhos para este personagem";
+    if (lastComic)
+      date = new Date(lastComic.dates[0].date).toLocaleDateString("pt-BR");
+
     setLastComicDate(date);
   }, [lastComic]);
 
