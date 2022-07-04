@@ -1,8 +1,7 @@
 import "./App.scss";
-import { Home, NotFound } from "pages";
+import { Home, NotFound, Character } from "pages";
 import { Routes, Route, Outlet } from "react-router-dom";
 import { Footer } from "components/common";
-import Character from "pages/Character/Character";
 
 function Layout() {
   return (
