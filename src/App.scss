@@ -1,6 +1,9 @@
 .container {
   max-width: 1220px;
-  margin: 0 auto 95px;
+  margin: 0 auto;
   padding: 0px 10px;
 
+  &--sm {
+    max-width: 1070px;
+  }
 }
