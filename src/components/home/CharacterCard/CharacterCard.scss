@@ -1,4 +1,4 @@
-.hero-card__main { 
+.hero-card__main {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -14,8 +14,9 @@
         justify-content: space-between;
         font-weight: 700;
         font-size: 1.05rem;
-
+        
         span {
+            color: #333;
             cursor: pointer;
         }
     }
@@ -31,4 +32,8 @@
             color: #B50000;
         }
     }
+}
+
+a {
+    text-decoration: none;
 }

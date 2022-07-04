@@ -22,7 +22,7 @@ function SearchBar(props: SearchBarProps) {
 
   const doSearch = () => {
     if (searchInput) {
-      navigate(`/busca/${searchInput}`);
+      navigate(`../busca/${searchInput}`, { replace: true });
       return;
     }
     navigate("..", { replace: true });
