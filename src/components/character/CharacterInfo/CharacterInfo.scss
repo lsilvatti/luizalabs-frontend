@@ -1,0 +1,79 @@
+.luiza-heroes-character-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  position: relative;
+
+  &__details {
+    z-index: 5;
+    margin: 0 auto;
+    @media (min-width: 576px) {
+      margin: unset;
+      flex-basis: 35%;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &__img {
+    &--mobile {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__img-area {
+    z-index: 5;
+  }
+
+  &__bg-name {
+    user-select: none;
+    cursor: default;
+    font-size: 9rem;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    width: 100%;
+    overflow-x: hidden;
+    left: 140px;
+    top: 45px;
+    opacity: 0.4;
+    text-transform: uppercase;
+  }
+
+  &__stat {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    font-weight: 600;
+
+    span {
+      margin-left: 10px;
+    }
+    div {
+      vertical-align: middle;
+    }
+  }
+
+  &__rating {
+    font-weight: 600;
+    margin-top: 20px;
+    span {
+      margin-right: 10px;
+    }
+  }
+
+  &__last-comic {
+    span {
+      font-weight: 600;
+    }
+  }
+}
