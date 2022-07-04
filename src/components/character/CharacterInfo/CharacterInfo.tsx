@@ -7,6 +7,7 @@ import { Favorite } from "components/common";
 import { Character, Comic } from "components/types";
 import { useMediaQuery } from "hooks";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 interface CharacterInfoProps {
   character: Character;
@@ -31,6 +32,9 @@ export default function CharacterInfo(props: CharacterInfoProps) {
         {character.name}
       </span>
       <div className="luiza-heroes-character-info__details">
+        <Link className="luiza-heroes-character-info__back" to={".."}>
+          Voltar para a busca
+        </Link>
         <div className="luiza-heroes-character-info__title">
           <h1>{character.name}</h1>
           <Favorite character={character} />
@@ -80,10 +84,13 @@ export default function CharacterInfo(props: CharacterInfoProps) {
 
       {mobileBreakpoint && (
         <div className="luiza-heroes-character-info__img-area luiza-heroes-character-info__img-area--desktop">
-          <img
-            className="luiza-heroes-character-info__img luiza-heroes-character-info__img--desktop"
-            src={`${character.thumbnail.path}/portrait_uncanny.${character.thumbnail.extension}`}
-          />
+          <div style={{ position: "relative" }}>
+            <div className="luiza-heroes-character-info__img-bg"></div>
+            <img
+              className="luiza-heroes-character-info__img luiza-heroes-character-info__img--desktop"
+              src={`${character.thumbnail.path}/portrait_uncanny.${character.thumbnail.extension}`}
+            />
+          </div>
         </div>
       )}
     </section>
