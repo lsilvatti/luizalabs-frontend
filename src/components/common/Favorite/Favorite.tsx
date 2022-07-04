@@ -36,6 +36,7 @@ function Favorite(props: FavoriteProps) {
         onClick={handleClick}
         className="favorite__icon"
         src={favoriteIcon ? favorito_01 : favorito_02}
+        alt=""
       ></img>
     </>
   );

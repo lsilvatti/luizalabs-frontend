@@ -22,7 +22,10 @@ export default function CharacterInfo(props: CharacterInfoProps) {
   const [lastComicDate, setLastComicDate] = useState<String>();
 
   useEffect(() => {
-    const date = new Date(lastComic.dates[0].date).toLocaleDateString("pt-BR");
+    let date = "não há quadrinhos para este personagem";
+    if (lastComic)
+      date = new Date(lastComic.dates[0].date).toLocaleDateString("pt-BR");
+
     setLastComicDate(date);
   }, [lastComic]);
 
@@ -44,6 +47,7 @@ export default function CharacterInfo(props: CharacterInfoProps) {
             <img
               className="luiza-heroes-character-info__img luiza-heroes-character-info__img--mobile"
               src={`${character.thumbnail.path}/landscape_incredible.${character.thumbnail.extension}`}
+              alt={character.name}
             />
           </div>
         )}
@@ -72,6 +76,7 @@ export default function CharacterInfo(props: CharacterInfoProps) {
               <img
                 key={index}
                 src={index >= rating ? avaliacao_off : avaliacao_on}
+                alt=""
               />
             );
           })}
@@ -87,6 +92,7 @@ export default function CharacterInfo(props: CharacterInfoProps) {
           <div style={{ position: "relative" }}>
             <div className="luiza-heroes-character-info__img-bg"></div>
             <img
+              alt={character.name}
               className="luiza-heroes-character-info__img luiza-heroes-character-info__img--desktop"
               src={`${character.thumbnail.path}/portrait_uncanny.${character.thumbnail.extension}`}
             />
