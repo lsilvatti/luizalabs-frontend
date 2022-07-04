@@ -3,6 +3,7 @@ import { Character, Image } from "components/types";
 import { useGetCharacters } from "hooks";
 import { createContext } from "react";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import "./CharacterCard.scss";
 
@@ -13,10 +14,8 @@ interface CharacterCardProps {
 function CharacterCard(props: CharacterCardProps) {
   const { character } = props;
 
-  const CharacterContext = createContext(character);
-
   return (
-    <CharacterContext.Provider value={character}>
+    <Link to={`../personagem/${character.id}`}>
       <div className="hero-card__main">
         <img
           className="hero-card__portrait"
@@ -27,7 +26,7 @@ function CharacterCard(props: CharacterCardProps) {
           <Favorite character={character}></Favorite>
         </div>
       </div>
-    </CharacterContext.Provider>
+    </Link>
   );
 }
 

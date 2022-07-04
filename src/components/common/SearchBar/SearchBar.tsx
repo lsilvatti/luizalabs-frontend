@@ -21,7 +21,11 @@ function SearchBar(props: SearchBarProps) {
   }, []);
 
   const doSearch = () => {
-    navigate(`/${searchInput}`);
+    if (searchInput) {
+      navigate(`../busca/${searchInput}`, { replace: true });
+      return;
+    }
+    navigate("..", { replace: true });
   };
 
   const handleSearchInput = (event: React.ChangeEvent<HTMLInputElement>) => {

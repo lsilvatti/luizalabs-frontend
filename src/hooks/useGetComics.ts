@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { AxiosError } from "axios";
 import { getHash } from "utils/getHash";
 import { marvelService } from "services";
-import { Character } from "components/types";
+import { ComicDataContainer } from "components/types";
 
-const useGetCharacterById = (id: number) => {
-  const [data, setData] = useState<Character>();
+const useGetComics = (id: number) => {
+  const [data, setData] = useState<ComicDataContainer>();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
 
@@ -14,12 +14,13 @@ const useGetCharacterById = (id: number) => {
     setLoading(true);
     (async () => {
       try {
-        const response = await marvelService.get(`v1/public/characters/${id}`, {
-          params: getHash(),
-        });
-        const characterDataContainer = response.data.data;
-        if (characterDataContainer && characterDataContainer.count === 1)
-          setData(characterDataContainer.results[0]);
+        const response = await marvelService.get(
+          `v1/public/characters/${id}/comics`,
+          {
+            params: getHash(),
+          }
+        );
+        if (response.data.data) setData(response.data.data);
       } catch (err) {
         const error = err as Error | AxiosError;
         setError(error.message);
@@ -32,4 +33,4 @@ const useGetCharacterById = (id: number) => {
   return { data, error, loading };
 };
 
-export default useGetCharacterById;
+export default useGetComics;
