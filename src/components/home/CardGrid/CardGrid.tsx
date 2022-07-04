@@ -54,7 +54,7 @@ export default function CardGrid() {
   }, [data, loading, favoriteOnly, page, nameStartsWith]);
 
   return (
-    <section className="card-grid container">
+    <div className="card-grid container">
       <div className="card-grid__header">
         <span className="card-grid__info">
           {loading
@@ -70,7 +70,7 @@ export default function CardGrid() {
         ></CardGridOptions>
       </div>
       {heroList && !loading && data ? (
-        <section className="card-grid__main">
+        <div className="card-grid__main">
           <div className="card-grid__grid">
             {heroList.map((character, index, array) => {
               return (
@@ -94,10 +94,10 @@ export default function CardGrid() {
               <span>{error ? error : "Não há resultados para mostrar!"}</span>
             </div>
           )}
-        </section>
+        </div>
       ) : (
         <Loading></Loading>
       )}
-    </section>
+    </div>
   );
 }

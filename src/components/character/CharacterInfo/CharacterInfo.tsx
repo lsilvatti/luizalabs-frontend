@@ -27,7 +27,7 @@ export default function CharacterInfo(props: CharacterInfoProps) {
   }, [lastComic]);
 
   return (
-    <section className="luiza-heroes-character-info container container--sm">
+    <div className="luiza-heroes-character-info container container--sm">
       <span className="luiza-heroes-character-info__bg-name">
         {character.name}
       </span>
@@ -93,6 +93,6 @@ export default function CharacterInfo(props: CharacterInfoProps) {
           </div>
         </div>
       )}
-    </section>
+    </div>
   );
 }
