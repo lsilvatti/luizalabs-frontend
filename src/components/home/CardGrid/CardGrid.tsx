@@ -36,11 +36,6 @@ export default function CardGrid() {
   useEffect(() => {
     const storageFavorite = getFavoriteList();
     if (favoriteOnly && storageFavorite) {
-      console.log(storageFavorite);
-      console.log(
-        storageFavorite.filter((character) => character.name.includes(name))
-      );
-      console.log(name);
       setHeroList(
         storageFavorite.filter((character) =>
           character.name.toLocaleLowerCase().includes(name.toLowerCase())
