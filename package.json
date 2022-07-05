@@ -18,7 +18,8 @@
     "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll --testPathIgnorePatterns=.*e2e.spec.ts",
+    "testE2E": "react-scripts test --testPathPattern=.*e2e.spec.ts$",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
