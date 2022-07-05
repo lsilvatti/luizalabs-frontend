@@ -1,6 +1,6 @@
 import "./CharacterComics.scss";
 import { Comic } from "components/types";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface CharacterComicsProps {
   comics: Comic[];
@@ -27,6 +27,7 @@ export default function CharacterComics(props: CharacterComicsProps) {
             <a
               href={comicDetailUrl ? comicDetailUrl.url : ""}
               target="_blank"
+              rel="noreferrer"
               className="luiza-heroes-character-comics__comic"
               key={comic.id}
             >

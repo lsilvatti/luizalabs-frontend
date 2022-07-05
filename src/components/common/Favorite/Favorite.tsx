@@ -1,6 +1,5 @@
 import favorito_01 from "assets/svg/favorito_01.svg";
 import favorito_02 from "assets/svg/favorito_02.svg";
-import favorito_03 from "assets/svg/favorito_03.svg";
 import { Character } from "components/types";
 
 import { useEffect, useState } from "react";
@@ -20,7 +19,7 @@ function Favorite(props: FavoriteProps) {
     const favoriteList = getFavoriteList();
     if (favoriteList.find((element) => element.id === character.id))
       setFavoriteIcon(true);
-  }, []);
+  }, [character.id]);
 
   const handleClick = () => {
     if (favoriteIcon) {
