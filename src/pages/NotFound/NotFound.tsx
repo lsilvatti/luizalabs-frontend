@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./NotFound.scss";
 
 export default function NotFound() {
+  document.title = "Luizalabs - Heroes - Página não encontrada";
   return (
     <div className="luiza-heroes-not-found container">
       <img src={sad_face} alt="" />
