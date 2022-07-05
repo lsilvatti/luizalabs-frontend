@@ -9,7 +9,7 @@ export default function CharacterHeader() {
     <div className="luiza-heroes-character-header container">
       <div className="luiza-heroes-character-header__logo">
         <Link to={".."}>
-          <img src={logo_menor} alt="" />
+          <img src={logo_menor} alt="logo" />
         </Link>
       </div>
       <SearchBar
