@@ -24,6 +24,7 @@ function useMediaQuery(query: string): boolean {
     return () => {
       matchMedia.removeEventListener("change", handleChange);
     };
+    // eslint-disable-next-line
   }, [query]);
 
   return matches;

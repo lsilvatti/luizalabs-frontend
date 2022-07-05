@@ -51,7 +51,7 @@ export default function CardGrid() {
     }
 
     if (loading) setCount(0);
-  }, [data, loading, favoriteOnly, page, nameStartsWith]);
+  }, [data, loading, favoriteOnly, page, nameStartsWith, name]);
 
   return (
     <div className="card-grid container">

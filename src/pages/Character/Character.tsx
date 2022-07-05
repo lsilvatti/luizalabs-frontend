@@ -14,16 +14,9 @@ import "./Character.scss";
 export default function Character() {
   const { id } = useParams<"id">();
   const [characterId, setCharacterId] = useState<number>(0);
-  const {
-    data: character,
-    loading: loadingCharacter,
-    error: errorCharacter,
-  } = useGetCharacterById(characterId);
-  const {
-    data: comics,
-    loading: loadingComics,
-    error: errorComics,
-  } = useGetComics(characterId);
+  const { data: character, loading: loadingCharacter } =
+    useGetCharacterById(characterId);
+  const { data: comics, loading: loadingComics } = useGetComics(characterId);
 
   useEffect(() => {
     if (character)
