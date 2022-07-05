@@ -18,7 +18,7 @@ function SearchBar(props: SearchBarProps) {
 
   useEffect(() => {
     if (nameStartsWith) setSearchInput(nameStartsWith);
-  }, []);
+  }, [nameStartsWith]);
 
   const doSearch = () => {
     if (searchInput) {
@@ -36,7 +36,7 @@ function SearchBar(props: SearchBarProps) {
   const handleKeywordKeyPress = (
     event: React.KeyboardEvent<HTMLInputElement>
   ) => {
-    if (event.key == "Enter") {
+    if (event.key === "Enter") {
       doSearch();
     }
   };

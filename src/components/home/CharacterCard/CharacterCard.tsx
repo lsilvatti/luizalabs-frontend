@@ -1,8 +1,5 @@
 import { Favorite } from "components/common";
-import { Character, Image } from "components/types";
-import { useGetCharacters } from "hooks";
-import { createContext } from "react";
-import { useContext } from "react";
+import { Character } from "components/types";
 import { Link } from "react-router-dom";
 
 import "./CharacterCard.scss";

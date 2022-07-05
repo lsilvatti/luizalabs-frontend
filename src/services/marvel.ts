@@ -1,4 +1,4 @@
-import axios, { AxiosInstance } from "axios";
+import axios from "axios";
 
 const marvelService = axios.create({
   baseURL: process.env.REACT_APP_MARVEL_BASE_URL,
