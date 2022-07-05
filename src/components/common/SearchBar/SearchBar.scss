@@ -1,65 +1,64 @@
 .search-bar {
+  border-radius: 100px;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+
+  input {
+    border: none;
     border-radius: 100px;
-    background-size: cover;
-    position: relative;
+    background-color: transparent;
+    color: #333;
+    height: 100%;
     width: 100%;
-    display: flex;
     box-sizing: border-box;
+    &:focus {
+      border: none;
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+    cursor: pointer;
+  }
+
+  &--primary {
+    background-image: url("../../../assets/svg/search_bar_vermelho.svg");
+    max-width: 867px;
+    height: 67px;
 
     input {
-        border: none;
-        border-radius: 100px;
-        background-color: transparent;
-        color: #333;
-        height: 100%;
-        width: 100%;
-        box-sizing: border-box;
-        &:focus {
-            border: none;
-        }
+      font-size: 1.3rem;
+      padding-left: 60px;
+      color: #ff0000;
+      &::placeholder {
+        color: #ff7171;
+      }
+      &:focus {
+        outline: none;
+      }
     }
-
-    img {
-        position: absolute;
-        top: 50%;
-        left: 10px;
-        transform: translate(0,-50%);
-        cursor: pointer;
+  }
+  &--secondary {
+    background-image: url("../../../assets/svg/search_bar_branco.svg");
+    max-width: 572px;
+    height: 44px;
+    margin: 0 auto;
+    input {
+      font-size: 1rem;
+      padding-left: 35px;
+      color: #333;
+      &::placeholder {
+        color: #999;
+      }
+      &:focus {
+        outline: none;
+      }
     }
-
-    &--primary {
-        background-image: url("../../../assets/svg/search_bar_vermelho.svg");
-        max-width: 867px;
-        height: 67px;
-        
-        input {
-            font-size: 1.3rem;
-            padding-left: 60px;
-            color: #ff0000;
-            &::placeholder {
-                color:#ff7171 ;
-            }
-            &:focus {
-                outline: none;
-            }
-        }
-
-    }
-    &--secondary {
-        background-image: url("../../../assets/svg/search_bar_branco.svg");
-        max-width: 572px;
-        height: 44px;
-        margin: 0 auto;
-        input {
-            font-size: 1rem;
-            padding-left: 35px;
-            color: #333;
-            &::placeholder {
-                color:#999 ;
-            }
-            &:focus {
-                outline: none;
-            }
-        }
-    }
+  }
 }

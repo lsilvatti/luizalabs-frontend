@@ -7,9 +7,9 @@
   h2 {
     margin-bottom: 45px;
   }
-  
-  h2, p {
-    
+
+  h2,
+  p {
     text-align: center;
   }
 
@@ -43,8 +43,8 @@
   }
 
   @media (min-width: 576px) {
-
-    h2,p {
+    h2,
+    p {
       text-align: left;
     }
     margin-top: 90px;

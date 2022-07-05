@@ -1,3 +1,3 @@
 import marvelService from "./marvel";
 
-export { marvelService }
+export { marvelService };

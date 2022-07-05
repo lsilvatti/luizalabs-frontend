@@ -1,28 +1,28 @@
 .card-grid-pagination {
-    width: 100%;
-    margin-top: 45px;
-    color: #F00;
-    font-weight: 600;
-    display: flex;
-    height: 32px;
-    justify-content: center;
-    position: relative;
+  width: 100%;
+  margin-top: 45px;
+  color: #f00;
+  font-weight: 600;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  position: relative;
 
-    &__index {
-        margin: auto 0;
-    }
+  &__index {
+    margin: auto 0;
+  }
 
-    &__left {
-        left: 0
-    }
+  &__left {
+    left: 0;
+  }
 
-    &__right {
-        right: 0;
-    }
+  &__right {
+    right: 0;
+  }
 
-    img {
-        position: absolute;
-        cursor: pointer;
-        height: 2rem;
-    }
+  img {
+    position: absolute;
+    cursor: pointer;
+    height: 2rem;
+  }
 }
