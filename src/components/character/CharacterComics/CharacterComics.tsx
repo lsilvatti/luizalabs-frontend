@@ -17,6 +17,7 @@ export default function CharacterComics(props: CharacterComicsProps) {
   return (
     <div className="luiza-heroes-character-comics container container--sm">
       <h2>Ultimos Lançamentos</h2>
+      {!lastComics.length && <p> Não há lançamentos para este personagem</p>}
       <div className="luiza-heroes-character-comics__grid">
         {lastComics.map((comic, index) => {
           const comicDetailUrl = comic.urls.find(
