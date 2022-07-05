@@ -1,6 +1,6 @@
 import "./CharacterComics.scss";
 import { Comic } from "components/types";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface CharacterComicsProps {
   comics: Comic[];
@@ -17,6 +17,7 @@ export default function CharacterComics(props: CharacterComicsProps) {
   return (
     <div className="luiza-heroes-character-comics container container--sm">
       <h2>Ultimos Lançamentos</h2>
+      {!lastComics.length && <p> Não há lançamentos para este personagem</p>}
       <div className="luiza-heroes-character-comics__grid">
         {lastComics.map((comic, index) => {
           const comicDetailUrl = comic.urls.find(
@@ -26,6 +27,7 @@ export default function CharacterComics(props: CharacterComicsProps) {
             <a
               href={comicDetailUrl ? comicDetailUrl.url : ""}
               target="_blank"
+              rel="noreferrer"
               className="luiza-heroes-character-comics__comic"
               key={comic.id}
             >
